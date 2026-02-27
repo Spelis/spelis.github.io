@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ "/assets/css/main.css" | url}}">
+    <link rel="stylesheet" href="{% getBundleFileUrl "css" %}">
     {% block head %}{% endblock %}
     {% if title %}
         <title>{{ title }} - {{ site.title }}</title>
@@ -30,8 +31,9 @@
     </footer>
 
     <script src="{{ "/assets/js/main.js" | url}}"></script>
-    
+    <script src="{% getBundleFileUrl "js" %}"></script>
     <script defer src="{{ "/assets/js/lib/quicklink.umd.js" | url}}"></script>
+
     <script>
         window.addEventListener('load', () => {
             quicklink.listen();
