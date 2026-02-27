@@ -1,0 +1,96 @@
+@import url("./theme.css");
+
+body {
+    background: var(--base);
+    color: var(--text);
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: var(--text);
+    padding: 0.2rem;
+    border-radius: 0.1rem;
+    text-decoration: none;
+    position: relative;
+    isolation: isolate;
+}
+
+a::after {
+    content: "";
+    background-color: var(--text);
+    position: absolute;
+    width: 100%;
+    height: 0.2rem;
+    bottom: 0;
+    border-radius: 0.1rem 0.1rem;
+    left: 0;
+    z-index: -1;
+}
+a.active,
+a:hover {
+    color: var(--base);
+    background-color: var(--text);
+}
+
+header {
+    max-width: 80ch;
+    height: 5rem;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header h1 {
+    padding: 0;
+    margin: 0;
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: right;
+    list-style: none;
+    font-size: large;
+    gap: 0.2rem;
+}
+
+header a::after {display: none;}
+
+
+main {
+    max-width: 70ch;
+    margin-inline: auto;
+}
+
+code {
+    background-color: var(--code);
+    color: var(--code-text);
+    padding: 0.2rem;
+    border-radius: 0.1rem;
+}
+footer {
+    max-width: 80ch;
+    margin-inline: auto;
+    margin-top: 4rem;
+}
+footer .social {
+    margin-top: 1rem;
+    max-width: fit-content;
+    display: flex;
+    gap: 0.2rem;
+    margin-inline: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.my-age {
+    cursor:help;
+}
+
+@media screen and (max-width: 500px) {
+    header h1 {
+        font-size: medium;
+    }
+}

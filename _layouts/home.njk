@@ -1,0 +1,10 @@
+{% extends "base.njk" %}
+
+{% block header %}
+<h1>{{ title }}</h1>
+{% endblock %}
+
+{% block content %}
+HOME
+  {{ content | safe }}
+{% endblock %}
