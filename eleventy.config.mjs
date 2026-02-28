@@ -34,7 +34,8 @@ export default function(eleventyConfig) {
   eleventyConfig.addGlobalData("layout","page");
   eleventyConfig.addGlobalData("site", {
     title: siteConfig.siteTitle ?? "Site",
-    socials: siteConfig.socials
+    headerLinks: siteConfig.headerLinks ?? [],
+    footerLinks: siteConfig.footerLinks ?? []
   })
 
   eleventyConfig

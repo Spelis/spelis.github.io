@@ -24,8 +24,8 @@
 
     <footer>
         <div class="social">
-            {%- for s in site.socials -%}
-                <a href="{{ s.href }}" target="_blank">{{ s.name }}</a>
+            {%- for s in site.footerLinks -%}
+                <a no-transition href="{{ s.href }}" target="_blank">{{ s.name }}</a>
             {%- endfor -%}
         </div>
     </footer>

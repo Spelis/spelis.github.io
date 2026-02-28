@@ -38,6 +38,7 @@ if (noise && displacement) {
     transitionIn()
     const links = document.querySelectorAll("a");
     links.forEach(l => {    
+        if (l.hasAttribute("no-transition")) return;
         if (l.href.startsWith(location.origin)) {
             l.addEventListener("click", (e)=>{
                 e.preventDefault()
