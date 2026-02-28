@@ -3,6 +3,13 @@ import { config as siteConfig } from "./siteconfig.mjs";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import EleventyPluginOgImage from 'eleventy-plugin-og-image';
 import fs from "fs"
+import { OgImage } from 'eleventy-plugin-og-image/og-image';
+
+export class CustomOgImage extends OgImage {
+  async shortcodeOutput() {
+    return this.outputUrl();
+  }
+}
 
 export default function(eleventyConfig) {
 	// Order matters, put this at the top of your configuration file.
@@ -36,6 +43,7 @@ export default function(eleventyConfig) {
         },
       ],
     },
+    OgImage: CustomOgImage,
   });
 
   eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
