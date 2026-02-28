@@ -7,6 +7,16 @@ export default function(eleventyConfig) {
 
   eleventyConfig.addNunjucksFilter("date", (dateObj, formatString = 'MM.dd.yyyy') => format(dateObj, formatString))
 
+  eleventyConfig.addCollection("navItems", function (collectionsApi) {
+		return collectionsApi.getAll().filter(i =>  {
+      if (i.data.nav) {
+        return i.data.nav > 0
+      }
+    }).sort(function (a, b) {
+			return (a.data.nav ?? -1000) - (b.data.nav ?? -1000);
+		});
+	});
+
   eleventyConfig.addBundle("css", {
     toFileDirectory: "assets/css/bundles/",
 

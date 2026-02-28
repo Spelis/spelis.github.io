@@ -1,3 +1,13 @@
+const menuOpen = document.getElementById("menu-open");
+const menu = document.getElementById("menu");
+const menuClose = document.getElementById("menu-close");
+
+if (menu && menuOpen && menuClose) {
+    menuOpen.addEventListener("click", () => menu.classList.add("open"));
+    menuClose.addEventListener("click", () => menu.classList.remove("open"));
+}
+
+
 const elements = document.querySelectorAll(".my-age")
 
 const specificDate = new Date("2010-05-11T22:50:00");

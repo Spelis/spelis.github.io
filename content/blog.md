@@ -1,7 +1,7 @@
 ---
 title: Blog
 layout: page
-nav: true
+nav: 20
 ---
 
 Some interesting posts. :)

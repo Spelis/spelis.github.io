@@ -1,7 +1,8 @@
-<nav>
+<nav id="menu">
+    <button id="menu-close" class="mobile-menu">[CLOSE]</button>
     <ul>
-        {%- for p in collections.all -%}
-            {% if p.data.nav == true %}
+        {%- for p in collections.navItems -%}
+            {% if p.data.nav %}
                 <li>
                     <a href="{{ p.url }}" {%if p.url == page.url %}class="active"{%endif%}>{{ p.data.title }}</a>
                 </li>
