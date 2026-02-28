@@ -9,11 +9,12 @@
     {% block head %}{% endblock %}
     {% if title %}
         <title>{{ title }} - {{ site.title }}</title>
+        {% ogImage "/../_includes/og-image.og.njk", { title: title } %}
     {% else %}
         <title>{{ site.title }}</title>
+        {% ogImage "/../_includes/og-image.og.njk", { title: site.title } %}
     {% endif %}
     <meta name="description" content="{{ description }}">
-    {% ogImage "/../_includes/og-image.og.njk", { title: "Hello World!" } %}
 </head>
 <body>
     <header>
