@@ -1,5 +1,6 @@
 import { parseISO , format} from "date-fns";
 import { config as siteConfig } from "./siteconfig.mjs";
+import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 
 
 export default function(eleventyConfig) {
@@ -16,6 +17,17 @@ export default function(eleventyConfig) {
 			return (a.data.nav ?? -1000) - (b.data.nav ?? -1000);
 		});
 	});
+
+  eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
+    widths: [200, "auto"],
+    htmlOptions: {
+			imgAttributes: {
+				loading: "lazy",
+				decoding: "async",
+			},
+			pictureAttributes: {}
+		},
+  });
 
   eleventyConfig.addBundle("css", {
     toFileDirectory: "assets/css/bundles/",
