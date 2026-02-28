@@ -1,7 +1,8 @@
 import { parseISO , format} from "date-fns";
 import { config as siteConfig } from "./siteconfig.mjs";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
-
+import EleventyPluginOgImage from 'eleventy-plugin-og-image';
+import fs from "fs"
 
 export default function(eleventyConfig) {
 	// Order matters, put this at the top of your configuration file.
@@ -17,6 +18,25 @@ export default function(eleventyConfig) {
 			return (a.data.nav ?? -1000) - (b.data.nav ?? -1000);
 		});
 	});
+
+  eleventyConfig.addPlugin(EleventyPluginOgImage, {
+    satoriOptions: {
+      fonts: [
+        {
+          name: 'JetBrains Mono',
+          data: fs.readFileSync('./assets/fonts/JetBrains/OG-Regular.ttf'),
+          weight: 400,
+          style: 'normal',
+        },
+        {
+          name: 'JetBrains Mono',
+          data: fs.readFileSync('./assets/fonts/JetBrains/OG-Bold.ttf'),
+          weight: 800,
+          style: 'normal',
+        },
+      ],
+    },
+  });
 
   eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
     widths: [200, "auto"],

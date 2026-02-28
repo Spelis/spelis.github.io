@@ -1,0 +1,29 @@
+<style>
+    .root {
+        width: 100%;
+        height: 100%;
+        display: flex;
+
+        font-family: "JetBrains Mono";
+        flex-direction: column;
+        justify-content: flex-end;
+        background: #171715;
+        padding: 20px 50px;
+        border-bottom: 20px solid #efefd2;
+    }
+
+    .title {
+        color: #efefd2;
+        font-size: 70px;
+    }
+    .site {
+        color: #efefd2;
+        font-size: 20px;
+    }
+</style>
+
+<div class="root">
+    <div class="site">/home/spellis{{ siteTitle }}</div>
+
+    <h1 class="title">{{ title }}</h1>
+</div>

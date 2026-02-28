@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ "/assets/fonts/JetBrains.css" | url}}">
     <link rel="stylesheet" href="{{ "/assets/css/main.css" | url}}">
     <link rel="stylesheet" href="{% getBundleFileUrl "css" %}">
     {% block head %}{% endblock %}
@@ -11,11 +12,13 @@
     {% else %}
         <title>{{ site.title }}</title>
     {% endif %}
+    <meta name="description" content="{{ description }}">
+    {% ogImage "/../_includes/og-image.og.njk", { title: "Hello World!" } %}
 </head>
 <body>
     <header>
         <a href="{{"/" | url}}"><h1>{{ site.title }}</h1></a>
-        <button id="menu-open" class="mobile-menu">[OPEN]</button>
+        <button id="menu-open" aria-label="Navmenu open" class="mobile-menu">[OPEN]</button>
         {% include "nav.njk" %}
     </header>
     <main>
