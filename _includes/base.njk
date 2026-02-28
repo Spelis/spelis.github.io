@@ -9,17 +9,12 @@
     {% block head %}{% endblock %}
     {% if title %}
         <title>{{ title }} - {{ site.title }}</title>
-        <meta name="twitter:title" content="{{ title }}" />
-
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:image" content="{% ogImage "/../_includes/og-image.og.njk", { title: title } %}" />
-        <meta property="og:image" content="{% ogImage "/../_includes/og-image.og.njk", { title: title } %}" />
     {% else %}
         <title>{{ site.title }}</title>
     {% endif %}
+    {% include "./meta.njk" %}
 
-    <meta name="twitter:description" content="Your description here" />
-    <meta name="description" content="{{ description }}">
+    
 </head>
 <body>
     <header>
