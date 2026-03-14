@@ -9,6 +9,7 @@ body {
 
 a {
     color: var(--text);
+    --brackets-color: var(--accent);
     padding: 0.2rem;
     clip-path: polygon(0% 0,0% calc(100% - 0.2rem), 0.2rem 100%,100% 100%, 100% 0%);
     border-radius: 0rem;
@@ -44,7 +45,7 @@ a::after {
 a::after,
 a::before {
     content: "[";
-    color: var(--base-3);
+    color: var(--brackets-color);
 }
 a::after {
     content: "]";
@@ -61,6 +62,7 @@ a.active,
 a:focus,
 a:hover {
     color: var(--base);
+    --brackets-color: var(--base-3);
     clip-path: polygon(0% 0,0% calc(100% - 0.4rem), 0.4rem 100%,100% 100%, 100% 0%);
     background-color: var(--text);
 }
