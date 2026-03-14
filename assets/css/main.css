@@ -127,13 +127,25 @@ main {
     margin-inline: auto;
 }
 
-code {
+code:not([class*="language-"]) {
     background-color: var(--code);
     color: var(--code-text);
     padding: 0.2rem;
     border-radius: 0;
     clip-path: polygon(0% 0,0% calc(100% - 0.4rem), 0.4rem 100%,100% 100%, 100% 0%);
 }
+pre[class*="language-"] {
+    position: relative;
+    padding: 1.5rem 1rem;
+    overflow-x: auto;
+    border-radius: 0;
+    clip-path: polygon(0% 0,0% calc(100% - 0.4rem), 0.4rem 100%,100% 100%, 100% 0%);
+    font-family: "JetBrains Mono", monospace;
+}
+pre[class*="language-"] * {
+    font-family: "JetBrains Mono", monospace;
+}
+
 footer {
     max-width: 80ch;
     margin-inline: auto;

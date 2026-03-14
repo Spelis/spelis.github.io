@@ -1,7 +1,9 @@
 import { parseISO , format} from "date-fns";
 import { config as siteConfig } from "./siteconfig.mjs";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
+import markdownIt from "markdown-it";
 import EleventyPluginOgImage from 'eleventy-plugin-og-image';
+import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import fs from "fs"
 import { OgImage } from 'eleventy-plugin-og-image/og-image';
 import path from "path";
@@ -32,6 +34,7 @@ export default function(eleventyConfig) {
 		});
 	});
 
+  eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(EleventyPluginOgImage, {
     satoriOptions: {
       fonts: [
@@ -96,6 +99,15 @@ export default function(eleventyConfig) {
     footerLinks: siteConfig.footerLinks ?? []
   })
 
+  let options = {
+		html: true,
+		breaks: true,
+		linkify: true,
+    langPrefix: 'codeblock language-',
+	};
+
+	eleventyConfig.setLibrary("md", markdownIt(options));
+  
   eleventyConfig
 		.addPassthroughCopy({"./public/": "/"})
 		.addPassthroughCopy({"./assets/": "/assets"})
