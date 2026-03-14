@@ -5,7 +5,7 @@ export const config = {
     footerLinks: [
         {name: "Github", href:"https://github.com/spelis/"},
         {name: "YouTube", href:"https://www.youtube.com/@Spelis"},
-        {name: "E-Mail", href:"mailto:spelis.loves.rust@gmail.com"},
+        {name: "E-Mail", href:"mailto:spelis.tech@gmail.com"},
     ],
 
     headerLinks: [
