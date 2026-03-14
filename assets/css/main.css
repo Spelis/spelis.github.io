@@ -58,6 +58,7 @@ a[target="_blank"]::after {
 
 
 a.active,
+a:focus,
 a:hover {
     color: var(--base);
     clip-path: polygon(0% 0,0% calc(100% - 0.4rem), 0.4rem 100%,100% 100%, 100% 0%);
@@ -177,7 +178,7 @@ picture img {
     display: none;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 720px) {
     nav {
         position: fixed;
         top: 0;
