@@ -4,6 +4,7 @@ import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import EleventyPluginOgImage from 'eleventy-plugin-og-image';
 import fs from "fs"
 import { OgImage } from 'eleventy-plugin-og-image/og-image';
+import path from "path";
 
 export class CustomOgImage extends OgImage {
   async shortcodeOutput() {
@@ -11,9 +12,14 @@ export class CustomOgImage extends OgImage {
   }
 }
 
+
+
 export default function(eleventyConfig) {
 	// Order matters, put this at the top of your configuration file.
-
+  eleventyConfig.addFilter("embedSVG", function(filePath) {
+    const fullPath = path.join("./", filePath);
+    return fs.readFileSync(fullPath, "utf-8");
+  });
   eleventyConfig.addNunjucksFilter("date", (dateObj, formatString = 'MM.dd.yyyy') => format(dateObj, formatString))
 
   eleventyConfig.addCollection("navItems", function (collectionsApi) {
@@ -38,6 +44,18 @@ export default function(eleventyConfig) {
         {
           name: 'JetBrains Mono',
           data: fs.readFileSync('./assets/fonts/JetBrains/OG-Bold.ttf'),
+          weight: 800,
+          style: 'normal',
+        },
+        {
+          name: 'Kode Mono',
+          data: fs.readFileSync('./assets/fonts/KodeMono/Regular.ttf'),
+          weight: 400,
+          style: 'normal',
+        },
+        {
+          name: 'Kode Mono',
+          data: fs.readFileSync('./assets/fonts/KodeMono/Bold.ttf'),
           weight: 800,
           style: 'normal',
         },

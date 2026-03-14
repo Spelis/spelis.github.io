@@ -1,5 +1,5 @@
 export const config = {
-    siteTitle: "/home/spelis",
+    siteTitle: "Spelis",
 
 
     footerLinks: [

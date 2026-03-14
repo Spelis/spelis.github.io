@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ "/assets/fonts/KodeMono.css" | url}}">
     <link rel="stylesheet" href="{{ "/assets/fonts/JetBrains.css" | url}}">
     <link rel="stylesheet" href="{{ "/assets/css/main.css" | url}}">
     <link rel="stylesheet" href="{% getBundleFileUrl "css" %}">
@@ -14,11 +15,14 @@
     {% endif %}
     {% include "./meta.njk" %}
 
-    
+    <link rel="shortcut icon" href="{{ "/assets/images/favicon.png" | url}}" type="image/png">
 </head>
 <body>
     <header>
-        <a href="{{"/" | url}}"><h1>{{ site.title }}</h1></a>
+        <a href="{{"/" | url}}" class="logo">
+            {{ "/assets/images/logo.svg" | embedSVG | safe }}
+            <h1>{{ site.title }}</h1>
+        </a>
         <button id="menu-open" aria-label="Navmenu open" class="mobile-menu">[OPEN]</button>
         {% include "nav.njk" %}
     </header>

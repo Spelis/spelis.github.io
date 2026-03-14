@@ -10,11 +10,25 @@ body {
 a {
     color: var(--text);
     padding: 0.2rem;
-    border-radius: 0.1rem;
+    clip-path: polygon(0% 0,0% calc(100% - 0.2rem), 0.2rem 100%,100% 100%, 100% 0%);
+    border-radius: 0rem;
     text-decoration: none;
     position: relative;
     isolation: isolate;
 }
+
+a[target="_blank"]::before {
+    content: "";
+    background-color: currentColor;
+    clip-path: polygon(0% 0, 100% 100%, 100% 0%);
+    position: absolute;
+    top: 0;
+    width: 0.4rem;
+    height: 0.4rem;
+    right: 0;
+    z-index: -1;
+}
+
 
 a::after {
     content: "";
@@ -23,13 +37,14 @@ a::after {
     width: 100%;
     height: 0.2rem;
     bottom: 0;
-    border-radius: 0.1rem 0.1rem;
+    border-radius: 0;
     left: 0;
     z-index: -1;
 }
 a.active,
 a:hover {
     color: var(--base);
+    clip-path: polygon(0% 0,0% calc(100% - 0.4rem), 0.4rem 100%,100% 100%, 100% 0%);
     background-color: var(--text);
 }
 
@@ -44,6 +59,16 @@ header {
 header h1 {
     padding: 0;
     margin: 0;
+}
+header .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding-inline: 0.5rem;
+}
+header .logo svg {
+    height: 2rem;
+    width: auto;
 }
 
 nav ul {
@@ -79,7 +104,8 @@ code {
     background-color: var(--code);
     color: var(--code-text);
     padding: 0.2rem;
-    border-radius: 0.1rem;
+    border-radius: 0;
+    clip-path: polygon(0% 0,0% calc(100% - 0.4rem), 0.4rem 100%,100% 100%, 100% 0%);
 }
 footer {
     max-width: 80ch;

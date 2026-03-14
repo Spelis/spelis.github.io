@@ -1,0 +1,17 @@
+@font-face {
+    font-family: "Kode Mono";
+    font-weight: normal;
+    font-style: normal;
+    src:
+        local("Kode Mono"),
+        url("./KodeMono/Regular.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Kode Mono";
+    font-weight: bold;
+    font-style: normal;
+    src:
+        local("Kode Mono"),
+        url("./KodeMono/Bold.woff2") format("woff2");
+}
