@@ -3,9 +3,9 @@ title: "Home"
 nav: 10
 ---
 
-Hey, I'm Spelis.
+Hey, I'm Spelis!
 
-I write software mainly in **C**, **Python**, and **Java**. Currently learning **Zig**. 
+I write software mainly in **C**, **Python** and **Java**. Currently learning **Zig**. 
 
 ---
 

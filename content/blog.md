@@ -4,9 +4,9 @@ layout: page
 nav: 20
 ---
 
-Some interesting posts. :)
-
-## Posts
+<!-- Some interesting posts. :) -->
+<!---->
+<!-- ## Posts -->
 <ul>
     {% for post in collections.blog | reverse %}
     <li>
