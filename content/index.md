@@ -1,6 +1,5 @@
 ---
 title: "Home"
-nav: 10
 ---
 
 Hey, I'm Spelis!
