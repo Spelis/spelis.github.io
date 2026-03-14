@@ -16,7 +16,7 @@ a {
     position: relative;
     isolation: isolate;
 }
-
+/*
 a[target="_blank"]::before {
     content: "";
     background-color: currentColor;
@@ -40,7 +40,23 @@ a::after {
     border-radius: 0;
     left: 0;
     z-index: -1;
+}*/
+a::after,
+a::before {
+    content: "[";
+    color: var(--base-3);
 }
+a::after {
+    content: "]";
+}
+a[target="_blank"]::before {
+    content: "{";
+}
+a[target="_blank"]::after {
+    content: "}";
+}
+
+
 a.active,
 a:hover {
     color: var(--base);
@@ -49,8 +65,11 @@ a:hover {
 }
 
 header {
+    background: repeating-linear-gradient(45deg,var(--base) 0rem,var(--base) 1rem,var(--base-2) 1rem,var(--base-2) 2rem);
+    border: var(--base-2) 1px solid;
+    padding-inline: 0.4rem;
     max-width: 80ch;
-    height: 5rem;
+    height: 4rem;
     margin-inline: auto;
     display: flex;
     justify-content: space-between;
@@ -66,6 +85,11 @@ header .logo {
     gap: 0.5rem;
     padding-inline: 0.5rem;
 }
+
+header .logo::before,
+header .logo::after {
+    content: none;
+}
 header .logo svg {
     height: 2rem;
     width: auto;
@@ -80,15 +104,15 @@ nav ul {
     font-size: large;
     gap: 0.4rem;
 }
+/*
 header a::after {display: none;}
-
 header li a::after {
     display: block;
     top: 50%; left: -0.2rem; width: 1px; height: 50%; transform: translate(-50%, -50%);
     opacity: 50%;
 }
 header li:first-child a::after {display: none;}
-
+*/
 
 
 
@@ -140,7 +164,7 @@ picture img {
         var(--base) -0.2rem -0.2rem 0px,
         var(--text) -0.6rem -0.6rem 0px
     ;
-    border-radius: 0.4rem;
+    border-radius: 0rem;
 }
 
 @media screen and (max-width: 80ch) {
@@ -197,5 +221,4 @@ picture img {
         display: block;
         padding: 0.5rem;
     }
-    nav ul li a::after {display: none;}
 }
