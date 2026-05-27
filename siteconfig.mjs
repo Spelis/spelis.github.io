@@ -3,14 +3,14 @@ export const config = {
 
 
     footerLinks: [
-        {name: "Github", href:"https://github.com/spelis/"},
-        {name: "YouTube", href:"https://www.youtube.com/@Spelis"},
-        {name: "E-Mail", href:"mailto:spelis.tech@gmail.com"},
+        {name: "Github", tooltip: "@Spelis", href:"https://github.com/spelis/"},
+        {name: "YouTube", tooltip: "@Spelis", href:"https://www.youtube.com/@Spelis"},
+        {name: "E-Mail", tooltip:"spelis@spelis.li", href:"mailto:spelis@spelis.li"},
+        {name: "BlueSky", tooltip:"@spelis.li", href:"https://bsky.app/profile/spelis.li"},
     ],
 
     headerLinks: [
-        {name: "Skolmaten", href:"https://spelis.projnull.eu/skolmaten/"},
-        {name: "Git", href:"https://git.spelis.projnull.eu/"},
-        {name: "Files", href:"https://share.spelis.projnull.eu/"},
+        {name: "Git", href:"https://git.spelis.li/"},
+        {name: "Paste", href:"https://paste.spelis.li/"},
     ]
 }

@@ -25,7 +25,7 @@
 </style>
 
 <div class="root">
-    <div class="site">{{ siteTitle }}</div>
+    <div class="site">{{ siteTitle | safe }}</div>
 
-    <h1 class="title">{{ title }}</h1>
+    <h1 class="title">{{ title | safe }}</h1>
 </div>
