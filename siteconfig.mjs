@@ -3,10 +3,10 @@ export const config = {
 
 
     footerLinks: [
-        {name: "Github", tooltip: "@Spelis", href:"https://github.com/spelis/"},
-        {name: "YouTube", tooltip: "@Spelis", href:"https://www.youtube.com/@Spelis"},
+        {name: "Github", tooltip: "@Spelis", href:"https://spelis.li/gh"},
+        {name: "YouTube", tooltip: "@Spelis", href:"https://spelis.li/yt"},
         {name: "E-Mail", tooltip:"spelis@spelis.li", href:"mailto:spelis@spelis.li"},
-        {name: "BlueSky", tooltip:"@spelis.li", href:"https://bsky.app/profile/spelis.li"},
+        {name: "BlueSky", tooltip:"@spelis.li", href:"https://spelis.li/bsky"},
     ],
 
     headerLinks: [

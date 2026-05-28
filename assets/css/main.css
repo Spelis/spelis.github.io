@@ -255,3 +255,11 @@ picture img {
         padding: 0.5rem;
     }
 }
+
+.split {
+  display: flex;
+}
+
+.split > * {
+  flex: 1;
+}
