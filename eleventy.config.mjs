@@ -7,14 +7,13 @@ import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import fs from "fs"
 import { OgImage } from 'eleventy-plugin-og-image/og-image';
 import path from "path";
+import sitemap from "@quasibit/eleventy-plugin-sitemap";
 
 export class CustomOgImage extends OgImage {
   async shortcodeOutput() {
     return this.outputUrl();
   }
 }
-
-
 
 export default function(eleventyConfig) {
 	// Order matters, put this at the top of your configuration file.
@@ -67,6 +66,12 @@ export default function(eleventyConfig) {
     OgImage: CustomOgImage,
   });
 
+	eleventyConfig.addPlugin(sitemap, {
+		sitemap: {
+			hostname: "https://spelis.li",
+		},
+	});
+
   eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
     widths: [200, "auto"],
     htmlOptions: {
@@ -111,6 +116,7 @@ export default function(eleventyConfig) {
   eleventyConfig
 		.addPassthroughCopy({"./public/": "/"})
 		.addPassthroughCopy({"./assets/": "/assets"})
+		.addPassthroughCopy({"./assets/images/favicon.ico": "/favicon.ico"})
 
 };
 export const config = {
