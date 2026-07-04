@@ -8,6 +8,7 @@ import fs from "fs"
 import { OgImage } from 'eleventy-plugin-og-image/og-image';
 import path from "path";
 import sitemap from "@quasibit/eleventy-plugin-sitemap";
+import { DateTime } from "luxon";
 
 export class CustomOgImage extends OgImage {
   async shortcodeOutput() {
@@ -21,7 +22,11 @@ export default function(eleventyConfig) {
     const fullPath = path.join("./", filePath);
     return fs.readFileSync(fullPath, "utf-8");
   });
-  eleventyConfig.addNunjucksFilter("date", (dateObj, formatString = 'MM.dd.yyyy') => format(dateObj, formatString))
+	eleventyConfig.addNunjucksFilter("date", (dateObj, formatString) => {
+		return DateTime.fromJSDate(dateObj).toFormat(
+			formatString || "cccc, LLLL dd yyyy"
+		);
+	});
 
   eleventyConfig.addCollection("navItems", function (collectionsApi) {
 		return collectionsApi.getAll().filter(i =>  {

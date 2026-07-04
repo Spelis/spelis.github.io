@@ -6,10 +6,11 @@
 
 {% block content %}
   <h1>{{ title }}</h1>
-  <div class="post-info">
-    <small>{{ page.date | date }}</small>
-  </div>
   <div>
     {{ content | safe }}
   </div>
+	<hr>
+	<div class="post-info">
+		<small>{{ page.date | date }}</small>
+	</div>
 {% endblock %}

@@ -1,6 +1,7 @@
 ---
 title: Made a Pastebin site :P
 keywords: pastebin bin paste cbin
+date: 2026-05-07
 ---
 
 These past few days I've spent my time working on a project called CBin, along with my friend Jan Palma (who made the frontend). It is a pastebin server written in C (if you couldn't tell) 

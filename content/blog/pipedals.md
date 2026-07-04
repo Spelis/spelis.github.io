@@ -1,6 +1,7 @@
 ---
 title: Dead simple digital guitar pedals in C
 keywords: guitar pedal c simple
+date: 2026-05-25
 ---
 
 There's something I hate about the entire "professional digital audio workstation ecosystem", it's the complexity.

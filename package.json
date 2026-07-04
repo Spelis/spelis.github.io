@@ -19,6 +19,7 @@
     "@quasibit/eleventy-plugin-sitemap": "^2.2.0",
     "date-fns": "^4.1.0",
     "eleventy-plugin-og-image": "^4.2.1",
+    "luxon": "^3.7.2",
     "sass": "^1.97.3"
   }
 }
