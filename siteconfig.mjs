@@ -11,6 +11,5 @@ export const config = {
 
     headerLinks: [
         {name: "Git", href:"https://git.spelis.li/"},
-        {name: "Paste", href:"https://paste.spelis.li/"},
     ]
 }

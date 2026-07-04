@@ -15,6 +15,8 @@ I'm a student from Sweden with a passion for writing simple code and playing bas
     * FabricMC mods
     * PaperMC plugins
 
+You can browse some Git repositories of mine <a href="https://git.spelis.li/" target="_blank">here</a>.
+
 </div>
 <div>
 <img src="https://share.spelis.li/squierpbass.png" alt="my bass" width=200>

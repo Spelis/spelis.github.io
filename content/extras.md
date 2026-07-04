@@ -4,6 +4,11 @@ layout: page
 nav: 19
 ---
 
-[Paste bin](https://paste.spelis.li/)
+## Services
+
 [Git repos](https://git.spelis.li/)
 [File Share](https://share.spelis.li/)
+
+## Random
+
+[Wallpapers](https://share.spelis.li/Wallpapers/)
