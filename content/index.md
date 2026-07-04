@@ -5,21 +5,26 @@ title: "Hey, I'm Spelis!"
 <div class="split">
 <div>
 
-I'm a student from Sweden with a passion for writing simple code and playing bass guitar. Right now I mostly practice playing my favorite songs and writing the code that i like writing.
+Hey! I am a student from Sweden, I like to write software and play bass guitar.
 
-### Knowledge
+I like to build things simple, fast and easy to understand. I spend a lot of time playing with low-level programming, Linux, and whatever catches my eye that week. I write most of my projects in C. When I'm not coding I spend most of my time practicing bass and learning songs I like.
+
+Studying Computer Science and IT at NTI in Luleå, Sweden.
+
+## Technologies
+
+While I'm always learning new things (and there's more I already know), these are the technologies I'm most comfortable with:
 
 * C
     * Raylib
+    * POSIX/Linux development
 * Java
-    * FabricMC mods
-    * PaperMC plugins
-
-You can browse some Git repositories of mine <a href="https://git.spelis.li/" target="_blank">here</a>.
+    * FabricMC mod development
+    * PaperMC plugin development
 
 </div>
-<div>
-<img src="https://share.spelis.li/squierpbass.png" alt="my bass" width=200>
+<div style="padding:2em">
+<img src="https://share.spelis.li/squierpbass.png" alt="my bass" style="width:100%; height: auto">
 </div>
 </div>
 
