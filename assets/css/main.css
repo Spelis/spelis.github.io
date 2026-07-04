@@ -7,6 +7,10 @@ body {
     padding: 0.5rem;
 }
 
+main > h1 {
+	text-align: center;
+}
+
 a {
     color: var(--text);
     --brackets-color: var(--accent);
@@ -71,7 +75,8 @@ a[target="_blank"]::after {
 	z-index: 1;
 	top: 100%;
   left: 50%;
-  margin-left: -50%;
+  transform: translateX(-50%);
+	min-width: 100%;
 }
 .tooltip:hover .tooltiptext {
 	visibility: visible;
@@ -191,13 +196,6 @@ picture {
 }
 picture img {
     max-width: 100%;
-    box-shadow:
-        var(--base) 0.2rem 0.2rem 0px,
-        var(--text) 0.6rem 0.6rem 0px,
-        var(--base) -0.2rem -0.2rem 0px,
-        var(--text) -0.6rem -0.6rem 0px
-    ;
-    border-radius: 0rem;
 }
 
 @media screen and (max-width: 80ch) {
@@ -263,3 +261,16 @@ picture img {
 .split > * {
   flex: 1;
 }
+
+a.blogpost {
+	display:block;
+}
+a.blogpost:after,
+a.blogpost:before {
+	content: "";
+}
+
+a.blogpost > h3 {
+	margin:0;
+}
+

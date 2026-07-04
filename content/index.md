@@ -24,6 +24,15 @@ You can browse some Git repositories of mine <a href="https://git.spelis.li/" ta
 </div>
 
 ---
+# Blog
+<div> {% for post in collections.blog | reverse %}
+    <a href="{{ post.url }}" class="blogpost">
+        <h3>{{ post.data.title }}</h3>
+        <small>{{ post.date | date }}<span style="float:right;">{{ post.url }}</span></small>
+    </a><br> {% endfor %}
+</div>
+
+---
 
 <span>Location: <code>Northern Sweden</code></span>
 
