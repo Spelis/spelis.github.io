@@ -3,7 +3,7 @@ title: "Hey, I'm Spelis!"
 ---
 
 <div class="split">
-<div>
+<div style="flex:2">
 
 Hey! I am a student from Sweden, I like to write software and play bass guitar.
 
@@ -23,7 +23,7 @@ While I'm always learning new things (and there's more I already know), these ar
     * PaperMC plugin development
 
 </div>
-<div style="padding:2em">
+<div style="padding: 0 2em; flex:1">
 <img src="https://share.spelis.li/squierpbass.png" alt="my bass" style="width:100%; height: auto">
 </div>
 </div>

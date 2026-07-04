@@ -94,7 +94,7 @@ header {
     background: repeating-linear-gradient(45deg,var(--base) 0rem,var(--base) 1rem,var(--base-2) 1rem,var(--base-2) 2rem);
     border: var(--base-2) 1px solid;
     padding-inline: 0.4rem;
-    max-width: 80ch;
+    max-width: 110ch;
     height: 4rem;
     margin-inline: auto;
     display: flex;
@@ -140,13 +140,8 @@ header li a::after {
 header li:first-child a::after {display: none;}
 */
 
-
-
-
-
-
 main {
-    max-width: 70ch;
+    max-width: 100ch;
     margin-inline: auto;
 }
 
@@ -256,10 +251,6 @@ picture img {
 
 .split {
   display: flex;
-}
-
-.split > * {
-  flex: 1;
 }
 
 a.blogpost {
