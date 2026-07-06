@@ -265,3 +265,8 @@ a.blogpost > h3 {
 	margin:0;
 }
 
+blockquote {
+	border-left: 2px solid var(--base-3);
+	padding-left: 10px;
+	color: var(--code-text);
+}

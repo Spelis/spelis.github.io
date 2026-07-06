@@ -7,14 +7,14 @@ function transitionOut(callback) {
     document.body.style.filter = "url(#transition)"
     const src = new Number(displacement.getAttribute("scale"));
     noise.setAttribute("seed",Math.random() * 1000)
-    if (src < 100) {
-        displacement.setAttribute("scale", src + 20 + src);
+    if (src < 1000) {
+        displacement.setAttribute("scale", src + 10 + src);
         nextFunc = () => transitionOut(callback)
         requestAnimationFrame(nextFunc)
     } else {
         setTimeout(() =>{
             document.body.style.filter = ""
-        },1000);
+        },10000);
         callback()
     }
 }
