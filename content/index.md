@@ -22,12 +22,16 @@ While I'm always learning new things (and there's more I already know), these ar
     * FabricMC mod development
     * PaperMC plugin development
 
+---
+
 This site is rated <a href="https://www.mabsland.com/Adoption.html" target="_blank">Web 14</a>
 
 > This site contains slightly offensive material.  High chance of mild swearing, partial nudity, violence and adult themes.
 
 <img src="../assets/images/web14.gif" alt="web14">
+
 </div>
+
 <div style="padding: 0 2em; flex:1">
 <img src="../assets/images/bass.png" alt="my bass" style="width:100%; height: auto">
 </div>
