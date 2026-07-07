@@ -31,7 +31,8 @@ This site is rated <a href="https://www.mabsland.com/Adoption.html" target="_bla
 </div>
 
 ---
-# Blog
+# [Blog](/blog/)
+{% set limit = 3 %}
 {% include "blog-list.njk" %}
 
 ---

@@ -22,56 +22,58 @@
 </head>
 
 <body>
-	<header>
-		<a href="{{" /" | url}}" class="logo">
-			{{ "/assets/images/logo.svg" | embedSVG | safe }}
-			<h1>{{ site.title }}</h1>
-		</a>
-		<button id="menu-open" aria-label="Navmenu open" class="mobile-menu">[OPEN]</button>
-		{% include "nav.njk" %}
-	</header>
-	<main>
-		{% block content %}{% endblock %}
-	</main>
+	<div class="solidbg">
+		<header>
+			<a href="{{" /" | url}}" class="logo">
+				{{ "/assets/images/logo.svg" | embedSVG | safe }}
+				<h1>{{ site.title }}</h1>
+			</a>
+			<button id="menu-open" aria-label="Navmenu open" class="mobile-menu">[OPEN]</button>
+			{% include "nav.njk" %}
+		</header>
+		<main>
+			{% block content %}{% endblock %}
+		</main>
 
-	<footer>
-		<div class="social">
-			{%- for s in site.footerLinks -%}
-			<a no-transition href="{{ s.href }}" target="_blank" class="morph" data-alt="{{ s.tooltip }}">{{ s.name }}</a>
-			{%- endfor -%}
-		</div>
-	</footer>
+		<footer>
+			<div class="social">
+				{%- for s in site.footerLinks -%}
+				<a no-transition href="{{ s.href }}" target="_blank" class="morph" data-alt="{{ s.tooltip }}">{{ s.name }}</a>
+				{%- endfor -%}
+			</div>
+		</footer>
 
-	<script src="{{ " /assets/js/main.js" | url}}"></script>
-	<script src="{% getBundleFileUrl "js" %}"></script>
-	<script defer src="{{ " /assets/js/lib/quicklink.umd.js" | url}}"></script>
+		<script src="{{ " /assets/js/main.js" | url}}"></script>
+		<script src="{% getBundleFileUrl "js" %}"></script>
+		<script defer src="{{ " /assets/js/lib/quicklink.umd.js" | url}}"></script>
 
-	<script>
-		window.addEventListener('load', () => {
-			quicklink.listen();
-		});
-	</script>
+		<script>
+			window.addEventListener('load', () => {
+				quicklink.listen();
+			});
+		</script>
 
-	<svg style="visibility:hidden;" width="0" height="0">
-		<defs>
-			<filter id="transition" x="0%" y="0%" width="100%" height="100%">
-				<feTurbulence id="noise" type="fractalNoise" baseFrequency="0.2 0" seed="0" result="NOISE" numOctaves="2">
-				</feTurbulence>
-				<feDisplacementMap id="displacement" in="SourceGraphic" in2="NOISE" scale="0" xChannelSelector="A"
-					yChannelSelector="R"></feDisplacementMap>
-			</filter>
+		<svg style="visibility:hidden;" width="0" height="0">
+			<defs>
+				<filter id="transition" x="0%" y="0%" width="100%" height="100%">
+					<feTurbulence id="noise" type="fractalNoise" baseFrequency="0.2 0" seed="0" result="NOISE" numOctaves="2">
+					</feTurbulence>
+					<feDisplacementMap id="displacement" in="SourceGraphic" in2="NOISE" scale="0" xChannelSelector="A"
+						yChannelSelector="R"></feDisplacementMap>
+				</filter>
 
 
-			<filter id="image-filter" bx:pinned="true" primitiveUnits="objectBoundingBox">
-				<feTurbulence result="turbulence-1" baseFrequency="0.8 0.1" type="fractalNoise"></feTurbulence>
-				<feDisplacementMap result="displacement-map-0" in="SourceGraphic" in2="turbulence-1" scale="0.1"
-					xChannelSelector="R" yChannelSelector="R"></feDisplacementMap>
-			</filter>
+				<filter id="image-filter" bx:pinned="true" primitiveUnits="objectBoundingBox">
+					<feTurbulence result="turbulence-1" baseFrequency="0.8 0.1" type="fractalNoise"></feTurbulence>
+					<feDisplacementMap result="displacement-map-0" in="SourceGraphic" in2="turbulence-1" scale="0.1"
+						xChannelSelector="R" yChannelSelector="R"></feDisplacementMap>
+				</filter>
 
-		</defs>
-	</svg>
-	<script src="{{ " /assets/js/transitions.js" | url}}"></script>
-	<script src="{{ " /assets/js/morph.js" | url}}"></script>
+			</defs>
+		</svg>
+		<script src="{{ " /assets/js/transitions.js" | url}}"></script>
+		<script src="{{ " /assets/js/morph.js" | url}}"></script>
+	</div>
 </body>
 
 </html>

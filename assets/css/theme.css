@@ -1,13 +1,14 @@
 html {
-    --base: #151617;
-    --base-2: #1d2123;
-    --base-3: #2a3039;
-    --text: #d2e7efff;
-    --code: #1d2123;
-    --code-text: #abd1de;
-    --accent: #278db6;
-    font-family: "Kode Mono", monospace;
+	--base: #151617;
+	--base-2: #1d2123;
+	--base-3: #2a3039;
+	--text: #d2e7efff;
+	--code: #1d2123;
+	--code-text: #abd1de;
+	--accent: #278db6;
+	font-family: "Kode Mono", monospace;
 }
+
 * {
-    font-family: "Kode Mono", monospace;
+	font-family: "Kode Mono", monospace;
 }
