@@ -1,6 +1,6 @@
 ---
 title: Made a Pastebin site :P
-keywords: pastebin bin paste cbin
+keywords: pastebin c
 date: 2026-05-07
 ---
 

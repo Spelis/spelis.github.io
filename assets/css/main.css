@@ -61,27 +61,6 @@ a[target="_blank"]::after {
     content: "}";
 }
 
-.tooltip {
-	position:relative;
-	display:inline-block;
-}
-
-.tooltiptext {
-	visibility: hidden;
-	color: var(--base);
-	background: var(--text);
-	text-align: center;
-	position: absolute;
-	z-index: 1;
-	top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-	min-width: 100%;
-}
-.tooltip:hover .tooltiptext {
-	visibility: visible;
-}
-
 a.active,
 a:focus,
 a:hover {
@@ -94,7 +73,7 @@ header {
     background: repeating-linear-gradient(45deg,var(--base) 0rem,var(--base) 1rem,var(--base-2) 1rem,var(--base-2) 2rem);
     border: var(--base-2) 1px solid;
     padding-inline: 0.4rem;
-    max-width: 110ch;
+    max-width: 90ch;
     height: 4rem;
     margin-inline: auto;
     display: flex;
@@ -141,7 +120,7 @@ header li:first-child a::after {display: none;}
 */
 
 main {
-    max-width: 100ch;
+    max-width: 80ch;
     margin-inline: auto;
 }
 
@@ -269,4 +248,9 @@ blockquote {
 	border-left: 2px solid var(--base-3);
 	padding-left: 10px;
 	color: var(--code-text);
+}
+
+.morph {
+	min-width: 12ch;
+	text-align: center;
 }

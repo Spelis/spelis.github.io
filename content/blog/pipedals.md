@@ -1,6 +1,6 @@
 ---
 title: Dead simple digital guitar pedals in C
-keywords: guitar pedal c simple
+keywords: guitar c dsp audio
 date: 2026-05-25
 ---
 

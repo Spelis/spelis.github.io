@@ -77,16 +77,34 @@ export default function(eleventyConfig) {
 		},
 	});
 
-  eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
-    widths: [200, "auto"],
-    htmlOptions: {
-			imgAttributes: {
-				loading: "lazy",
-				decoding: "async",
-			},
-			pictureAttributes: {}
-		},
-  });
+	eleventyConfig.addGlobalData("age", () => {
+    const birthday = new Date("2010-05-11");
+
+    const today = new Date();
+
+    let age = today.getFullYear() - birthday.getFullYear();
+
+    if (
+        today.getMonth() < birthday.getMonth() ||
+        (today.getMonth() === birthday.getMonth() &&
+         today.getDate() < birthday.getDate())
+    ) {
+        age--;
+    }
+
+    return age;
+	});
+
+  // eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
+  //   widths: [200, "auto"],
+  //   htmlOptions: {
+  // 	imgAttributes: {
+  // 		loading: "lazy",
+  // 		decoding: "async",
+  // 	},
+  // 	pictureAttributes: {}
+  // },
+  // });
 
   eleventyConfig.addBundle("css", {
     toFileDirectory: "assets/css/bundles/",

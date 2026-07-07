@@ -7,20 +7,13 @@ title: "Hey, I'm Spelis!"
 
 Hey! I am a student from Sweden, I like to write software and play bass guitar.
 
-I like to build things simple, fast and easy to understand. I spend a lot of time playing with low-level programming, Linux, and whatever catches my eye that week. I write most of my projects in C. When I'm not coding I spend most of my time practicing bass and learning songs I like.
+I like to build things that are simple, fast and easy to understand. I spend a lot of time playing with low-level programming, Linux, and whatever catches my eye that week. I write most of my projects in C. When I'm not coding I spend most of my time practicing bass and learning songs I like.
 
-Studying Computer Science and IT at NTI in Luleå, Sweden.
+## Things I like building
 
-## Technologies
-
-While I'm always learning new things (and there's more I already know), these are the technologies I'm most comfortable with:
-
-* C
-    * Raylib
-    * POSIX/Linux development
-* Java
-    * FabricMC mod development
-    * PaperMC plugin development
+* Low-level software in C
+* Minecraft mods and plugins
+* Whatever I can come up with 
 
 ---
 
@@ -39,15 +32,10 @@ This site is rated <a href="https://www.mabsland.com/Adoption.html" target="_bla
 
 ---
 # Blog
-<div> {% for post in collections.blog | reverse %}
-    <a href="{{ post.url }}" class="blogpost">
-        <h3>{{ post.data.title }}</h3>
-        <small>{{ post.date | date }}<span style="float:right;">{{ post.url }}</span></small>
-    </a><br> {% endfor %}
-</div>
+{% include "blog-list.njk" %}
 
 ---
 
 <span>Location: <code>Northern Sweden</code></span>
 
-<span>Age: <code class="my-age"></code> years old.</span>
+<span>Age: <code class="my-age">{{ age }}</code> years old.</span>

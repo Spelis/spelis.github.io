@@ -37,8 +37,7 @@
 	<footer>
 		<div class="social">
 			{%- for s in site.footerLinks -%}
-			<a no-transition href="{{ s.href }}" class="tooltip" target="_blank">{{ s.name }}<span class="tooltiptext">{{
-					s.tooltip }}</span></a>
+			<a no-transition href="{{ s.href }}" target="_blank" class="morph" data-alt="{{ s.tooltip }}">{{ s.name }}</a>
 			{%- endfor -%}
 		</div>
 	</footer>
@@ -72,6 +71,7 @@
 		</defs>
 	</svg>
 	<script src="{{ " /assets/js/transitions.js" | url}}"></script>
+	<script src="{{ " /assets/js/morph.js" | url}}"></script>
 </body>
 
 </html>

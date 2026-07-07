@@ -7,14 +7,14 @@ function transitionOut(callback) {
     document.body.style.filter = "url(#transition)"
     const src = new Number(displacement.getAttribute("scale"));
     noise.setAttribute("seed",Math.random() * 1000)
-    if (src < 1000) {
-        displacement.setAttribute("scale", src + 10 + src);
+    if (src < 100) {
+        displacement.setAttribute("scale", src + 20 + src);
         nextFunc = () => transitionOut(callback)
         requestAnimationFrame(nextFunc)
     } else {
         setTimeout(() =>{
             document.body.style.filter = ""
-        },10000);
+        },1000);
         callback()
     }
 }
@@ -52,3 +52,11 @@ if (noise && displacement) {
 } else {
     console.log("Can't do transitions!!")
 }
+
+// for when going forwards or back
+window.addEventListener("pageshow", (e) => {
+    if (e.persisted) {
+        displacement.setAttribute("scale", 200);
+        transitionIn();
+    }
+});
