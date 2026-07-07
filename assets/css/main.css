@@ -13,8 +13,8 @@ main>h1 {
 
 div.solidbg {
 	background-color: var(--base);
-	max-width: fit-content;
-	min-width: calc(90ch + 2.8rem);
+	max-width: calc(90ch + 2.8rem);
+	width: calc(100%);
 	margin-inline: auto;
 	padding: 1rem;
 	min-height: calc(100vh - 1rem);
